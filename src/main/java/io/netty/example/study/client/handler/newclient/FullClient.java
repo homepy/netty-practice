@@ -1,6 +1,5 @@
 package io.netty.example.study.client.handler.newclient;
 
-import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
 import io.netty.example.study.client.handler.dispatcher.OperationResultFuture;
 import io.netty.example.study.common.order.OrderOperation;
 import io.netty.example.study.common.order.OrderOperationResult;
