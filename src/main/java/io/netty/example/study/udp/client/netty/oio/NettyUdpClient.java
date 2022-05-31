@@ -40,7 +40,7 @@ public class NettyUdpClient {
         ChannelFuture channelFuture1 = channelFuture.channel().writeAndFlush(requestMessage);
         channelFuture1.get();
 
-     }
+    }
 
 
 }

@@ -34,7 +34,7 @@ public class JdkUdpClient {
 
         //接受响应
         byte[] buffer = new byte[2048];
-        DatagramPacket  receivedPacket = new DatagramPacket(buffer, buffer.length);
+        DatagramPacket receivedPacket = new DatagramPacket(buffer, buffer.length);
         datagramSocket.receive(receivedPacket);
 
         ResponseMessage responseMessage = convertToResponse(receivedPacket);
@@ -52,7 +52,7 @@ public class JdkUdpClient {
 
     private static ResponseMessage convertToResponse(DatagramPacket receivedPacket) {
         ByteBuf bufForResponse = ByteBufAllocator.DEFAULT.buffer();
-        bufForResponse.writeBytes(receivedPacket.getData(),receivedPacket.getOffset(), receivedPacket.getLength());
+        bufForResponse.writeBytes(receivedPacket.getData(), receivedPacket.getOffset(), receivedPacket.getLength());
         ResponseMessage responseMessage = new ResponseMessage();
         responseMessage.decode(bufForResponse);
         return responseMessage;

@@ -31,7 +31,6 @@ public class NettyUdpClient {
         });
 
 
-
         ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 8090);
         channelFuture.sync();
 
@@ -39,7 +38,7 @@ public class NettyUdpClient {
         ChannelFuture channelFuture1 = channelFuture.channel().writeAndFlush(requestMessage);
         channelFuture1.get();
 
-     }
+    }
 
 
 }

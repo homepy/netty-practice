@@ -88,7 +88,7 @@ public class ClientV0 {
 
             channelFuture.channel().closeFuture().sync();
 
-        } finally{
+        } finally {
             group.shutdownGracefully();
         }
 

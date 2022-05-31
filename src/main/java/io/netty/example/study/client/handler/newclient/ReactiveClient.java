@@ -6,11 +6,11 @@ import io.netty.example.study.common.order.QueryOrderOperation;
 import io.netty.example.study.common.order.QueryOrderOperationResult;
 import reactor.core.publisher.Mono;
 
-public class ReactiveClient implements ReactiveOperationable{
+public class ReactiveClient implements ReactiveOperationable {
 
     private SyncOperationable syncOperationable;
 
-    ReactiveClient(SyncOperationable syncOperationable){
+    ReactiveClient(SyncOperationable syncOperationable) {
         this.syncOperationable = syncOperationable;
     }
 

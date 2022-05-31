@@ -8,7 +8,8 @@ import io.netty.example.study.common.order.QueryOrderOperationResult;
 
 public interface AsyncOperationable {
 
-    OperationResultFuture<OrderOperationResult> order(OrderOperation orderOperation) ;
+    OperationResultFuture<OrderOperationResult> order(OrderOperation orderOperation);
+
     OperationResultFuture<QueryOrderOperationResult> queryOrder(QueryOrderOperation queryOrderOperation);
 
 }

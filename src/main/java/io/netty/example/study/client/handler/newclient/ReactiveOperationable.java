@@ -8,7 +8,8 @@ import reactor.core.publisher.Mono;
 
 public interface ReactiveOperationable {
 
-    Mono<OrderOperationResult> order(OrderOperation orderOperation) ;
+    Mono<OrderOperationResult> order(OrderOperation orderOperation);
+
     Mono<QueryOrderOperationResult> queryOrder(QueryOrderOperation queryOrderOperation);
 
 }

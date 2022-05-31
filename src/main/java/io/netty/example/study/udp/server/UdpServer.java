@@ -22,7 +22,7 @@ public class UdpServer {
         bootstrap.handler(new ChannelInitializer<NioDatagramChannel>() {
             @Override
             protected void initChannel(NioDatagramChannel ch) throws Exception {
-              ch.pipeline().addLast(loggingHandler);
+                ch.pipeline().addLast(loggingHandler);
                 ch.pipeline().addLast(new ProtocolDecoder());
                 ch.pipeline().addLast(new ProtocolEncoder());
                 ch.pipeline().addLast(new UdpServerBusinessHandler());

@@ -16,7 +16,7 @@ public enum OperationType {
     AUTH(1, AuthOperation.class, AuthOperationResult.class),
     KEEPALIVE(2, KeepaliveOperation.class, KeepaliveOperationResult.class),
     ORDER(3, OrderOperation.class, OrderOperationResult.class),
-    QUERY(4,QueryOrderOperation.class, QueryOrderOperationResult.class);
+    QUERY(4, QueryOrderOperation.class, QueryOrderOperationResult.class);
 
     private int opCode;
     private Class<? extends Operation> operationClazz;

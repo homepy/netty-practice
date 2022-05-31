@@ -16,7 +16,7 @@ public class SyncClient implements SyncOperationable {
     private AsyncClient asyncClient;
 
     SyncClient(String serverAddress, int serverPort) throws SSLException, InterruptedException {
-            this.asyncClient = new AsyncClient(serverAddress, serverPort);
+        this.asyncClient = new AsyncClient(serverAddress, serverPort);
     }
 
     @Override
@@ -26,7 +26,9 @@ public class SyncClient implements SyncOperationable {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    };
+    }
+
+    ;
 
     @Override
     public QueryOrderOperationResult queryOrder(QueryOrderOperation operation) {

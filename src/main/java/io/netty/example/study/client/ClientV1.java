@@ -31,7 +31,7 @@ public class ClientV1 {
 
         NioEventLoopGroup group = new NioEventLoopGroup();
 
-        try{
+        try {
             bootstrap.group(group);
 
             SslContextBuilder sslContextBuilder = SslContextBuilder.forClient();
@@ -67,7 +67,7 @@ public class ClientV1 {
 
             channelFuture.channel().closeFuture().sync();
 
-        } finally{
+        } finally {
             group.shutdownGracefully();
         }
     }

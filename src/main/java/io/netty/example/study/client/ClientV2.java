@@ -37,7 +37,7 @@ public class ClientV2 {
 
         NioEventLoopGroup group = new NioEventLoopGroup();
 
-        try{
+        try {
             bootstrap.group(group);
 
             RequestPendingCenter requestPendingCenter = new RequestPendingCenter();
@@ -87,7 +87,7 @@ public class ClientV2 {
 
             channelFuture.channel().closeFuture().sync();
 
-        } finally{
+        } finally {
             group.shutdownGracefully();
         }
 

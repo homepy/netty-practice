@@ -7,7 +7,8 @@ import io.netty.example.study.common.order.QueryOrderOperationResult;
 
 public interface SyncOperationable {
 
-    OrderOperationResult order(OrderOperation operation) ;
+    OrderOperationResult order(OrderOperation operation);
+
     QueryOrderOperationResult queryOrder(QueryOrderOperation operation);
 
 }

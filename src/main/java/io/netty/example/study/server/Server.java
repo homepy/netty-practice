@@ -40,7 +40,7 @@ public class Server {
     public static void main(String[] args) throws InterruptedException, ExecutionException, CertificateException, SSLException {
 
         ServerBootstrap serverBootstrap = new ServerBootstrap();
-        
+
         serverBootstrap.channel(NioServerSocketChannel.class);
         serverBootstrap.option(NioChannelOption.SO_BACKLOG, 1024);
         serverBootstrap.childOption(NioChannelOption.TCP_NODELAY, true);
@@ -52,7 +52,7 @@ public class Server {
         UnorderedThreadPoolEventExecutor businessGroup = new UnorderedThreadPoolEventExecutor(10, new DefaultThreadFactory("business"));
         NioEventLoopGroup eventLoopGroupForTrafficShaping = new NioEventLoopGroup(0, new DefaultThreadFactory("TS"));
 
-        try{
+        try {
 
             serverBootstrap.group(bossGroup, workGroup);
 
@@ -116,7 +116,7 @@ public class Server {
 
             channelFuture.channel().closeFuture().sync();
 
-        } finally{
+        } finally {
             bossGroup.shutdownGracefully();
             workGroup.shutdownGracefully();
             businessGroup.shutdownGracefully();

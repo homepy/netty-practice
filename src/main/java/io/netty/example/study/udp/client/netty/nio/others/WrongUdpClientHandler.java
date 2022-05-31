@@ -8,6 +8,7 @@ import io.netty.handler.codec.MessageToMessageEncoder;
 
 import java.net.DatagramPacket;
 import java.util.List;
+
 //use
 public class WrongUdpClientHandler extends MessageToMessageEncoder<RequestMessage> {
 
@@ -19,7 +20,7 @@ public class WrongUdpClientHandler extends MessageToMessageEncoder<RequestMessag
             byte[] bytes = ByteBufUtil.getBytes(buffer);
             DatagramPacket datagramPacket = new DatagramPacket(bytes, bytes.length);
             out.add(datagramPacket);
-        }finally{
+        } finally {
             buffer.release();
         }
     }

@@ -34,7 +34,7 @@ public class AsyncClient implements AsyncOperationable {
     private RequestPendingCenter requestPendingCenter;
     private Channel channel;
 
-    AsyncClient(String serverAddress, int serverPort){
+    AsyncClient(String serverAddress, int serverPort) {
         this.requestPendingCenter = new RequestPendingCenter();
         Bootstrap bootstrap = new Bootstrap();
         initialBootstrap(bootstrap, requestPendingCenter);
@@ -76,7 +76,7 @@ public class AsyncClient implements AsyncOperationable {
         return getOrderOperationResult(orderOperation);
     }
 
-    private <T extends OperationResult> OperationResultFuture<T> getOrderOperationResult(Operation operation){
+    private <T extends OperationResult> OperationResultFuture<T> getOrderOperationResult(Operation operation) {
         long streamId = IdUtil.nextId();
         RequestMessage requestMessage = new RequestMessage(
                 streamId, operation);
@@ -87,7 +87,7 @@ public class AsyncClient implements AsyncOperationable {
     }
 
     @Override
-    public OperationResultFuture<QueryOrderOperationResult> queryOrder(QueryOrderOperation queryOrderOperation){
+    public OperationResultFuture<QueryOrderOperationResult> queryOrder(QueryOrderOperation queryOrderOperation) {
         return getOrderOperationResult(queryOrderOperation);
     }
 
